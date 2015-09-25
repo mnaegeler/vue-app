@@ -15,6 +15,12 @@ html
         line-height: 122px;
         font-size: 48px;
       }
+      .item .title {
+        display: none;
+      }
+      .item:hover .title {
+        display: block;
+      }
   body
 
     nav.top-nav
@@ -38,10 +44,16 @@ html
             span.lever
             | On
         
-        div.container
-          div.col.s3.card-panel.hoverable(v-repeat="item:items")
-            img(src="{{item.video.thumb}}", v-show="showImages")
-            | {{item.video.title}}
+        h3 Em destaque
+        div.divider
+        div.section
+          div.row
+            div.col.s3(v-repeat="item:items")
+              div.item
+                div
+                  img(src="{{item.video.thumb}}", v-show="showImages")
+                  img(src="http://placehold.it/193x141", v-show="!showImages")
+                span.title {{item.video.title}}
     
     script(type="text/javascript", src="/vendor/jquery/dist/jquery.min.js")
     script(type="text/javascript", src="/vendor/Materialize/dist/js/materialize.min.js")
