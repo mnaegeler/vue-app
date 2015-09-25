@@ -1,0 +1,12 @@
+{
+  "name": "Vue",
+  "version": "0.0.1",
+  "homepage": "",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "Materialize": "materialize#~0.97.1",
+    "vue": "~0.12.15",
+    "vue-resource": "~0.1.16"
+  }
+}

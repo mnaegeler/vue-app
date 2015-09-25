@@ -2,15 +2,15 @@
   "name": "vue-app",
   "version": "1.0.0",
   "description": "A Vue.js app",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Marcelo A Naegeler",
   "license": "ISC",
   "dependencies": {
-    "materialize-css": "^0.97.1",
-    "vue": "^0.12.15",
-    "vue-resource": "^0.1.16"
+    "express": "^4.13.3",
+    "jade": "^1.11.0",
+    "request": "^2.64.0"
   }
 }

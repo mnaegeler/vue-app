@@ -8,11 +8,13 @@
     el: '#redApp'
     , data: {
       items: []
+      , showImages: false
     }
     , ready: function() {
-      var url = 'api.json';
+      var url = '/api/videos';
       var self = this;
       this.$http.get(url, function(res) {
+        console.log(res);
         self.$set('items', res.videos);
       });
     }

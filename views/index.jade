@@ -1,0 +1,50 @@
+doctype html
+html
+  head
+    title Vue.js
+    link(href="/vendor/Materialize/dist/css/materialize.min.css", type="text/stylesheet", rel="stylesheet")
+    style.
+      .top-nav {
+        height: 100%;
+      }
+      .nav .nav-wrapper {
+        position: relative;
+        height: 100%;
+      }
+      .page-title {
+        line-height: 122px;
+        font-size: 48px;
+      }
+  body
+
+    nav.top-nav
+      div.container
+        div.nav-wrapper
+          a.page-title Welcome to RedApp
+      
+    div.container
+      div#redApp
+      
+        div.card-panel.hoverable
+          h3 Debugger
+          pre.language-markup 
+            | showImages: {{showImages}}
+      
+        div.switch
+          label
+            | Images 
+            | Off
+            input(type="checkbox", v-model="showImages")
+            span.lever
+            | On
+        
+        div.container
+          div.col.s3.card-panel.hoverable(v-repeat="item:items")
+            img(src="{{item.video.thumb}}", v-show="showImages")
+            | {{item.video.title}}
+    
+    script(type="text/javascript", src="/vendor/jquery/dist/jquery.min.js")
+    script(type="text/javascript", src="/vendor/Materialize/dist/js/materialize.min.js")
+    script(type="text/javascript", src="/vendor/vue/dist/vue.min.js")
+    script(type="text/javascript", src="/vendor/vue-resource/dist/vue-resource.min.js")
+    script(type="text/javascript", src="/javascripts/app.js")
