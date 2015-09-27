@@ -10,5 +10,3 @@ Install NPM packages:
 
 And see the magic happening!
 
-
-PS.: Sorry for use Redtube API LOL.

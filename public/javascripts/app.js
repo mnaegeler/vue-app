@@ -1,21 +1,16 @@
 (function() {
-  /*
-   * API
-   * http://api.redtube.com/?data=redtube.Videos.searchVideos&output=json&search=hard&tags[]=Teen&thumbsize=medium
-   */
-
   new Vue({
-    el: '#redApp'
+    el: '#beerApp'
     , data: {
       items: []
       , showImages: false
     }
     , ready: function() {
-      var url = '/api/videos';
+      var url = '/api/books';
       var self = this;
       this.$http.get(url, function(res) {
         console.log(res);
-        self.$set('items', res.videos);
+        self.$set('items', res);
       });
     }
     , hover: function() {

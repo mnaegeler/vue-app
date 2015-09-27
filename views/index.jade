@@ -1,62 +1,26 @@
-doctype html
-html
-  head
-    title Vue.js
-    link(href="/vendor/Materialize/dist/css/materialize.min.css", type="text/stylesheet", rel="stylesheet")
-    style.
-      .top-nav {
-        height: 100%;
-      }
-      .nav .nav-wrapper {
-        position: relative;
-        height: 100%;
-      }
-      .page-title {
-        line-height: 122px;
-        font-size: 48px;
-      }
-      .item .title {
-        display: none;
-      }
-      .item:hover .title {
-        display: block;
-      }
-  body
+extends layout.jade
+block body
+	nav.top-nav
+		div.container
+			div.nav-wrapper
+				a.page-title Welcome to Vue.js
+		
+	div
+		div#beerApp
+		
+			div.container
+				div.row
+					div.col.m2
+						| Busca por livros
+						ul
+							li Autor
+					div.col.m10
+						div.col.s3(v-repeat="item:items")
+							div.card.hoverable(style="background:url({{item.image}})")
+								span.item-title {{item.name}}
 
-    nav.top-nav
-      div.container
-        div.nav-wrapper
-          a.page-title Welcome to RedApp
-      
-    div.container
-      div#redApp
-      
-        div.card-panel.hoverable
-          h3 Debugger
-          pre.language-markup 
-            | showImages: {{showImages}}
-      
-        div.switch
-          label
-            | Images 
-            | Off
-            input(type="checkbox", v-model="showImages")
-            span.lever
-            | On
-        
-        h3 Em destaque
-        div.divider
-        div.section
-          div.row
-            div.col.s3(v-repeat="item:items")
-              div.item
-                div
-                  img(src="{{item.video.thumb}}", v-show="showImages")
-                  img(src="http://placehold.it/193x141", v-show="!showImages")
-                span.title {{item.video.title}}
-    
-    script(type="text/javascript", src="/vendor/jquery/dist/jquery.min.js")
-    script(type="text/javascript", src="/vendor/Materialize/dist/js/materialize.min.js")
-    script(type="text/javascript", src="/vendor/vue/dist/vue.min.js")
-    script(type="text/javascript", src="/vendor/vue-resource/dist/vue-resource.min.js")
-    script(type="text/javascript", src="/javascripts/app.js")
+	script(type="text/javascript", src="/vendor/jquery/dist/jquery.min.js")
+	script(type="text/javascript", src="/vendor/Materialize/dist/js/materialize.min.js")
+	script(type="text/javascript", src="/vendor/vue/dist/vue.min.js")
+	script(type="text/javascript", src="/vendor/vue-resource/dist/vue-resource.min.js")
+	script(type="text/javascript", src="/javascripts/app.js")
