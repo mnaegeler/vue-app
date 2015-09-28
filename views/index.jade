@@ -1,26 +1,27 @@
 extends layout.jade
 block body
-	nav.top-nav
-		div.container
-			div.nav-wrapper
-				a.page-title Welcome to Vue.js
-		
-	div
-		div#beerApp
-		
-			div.container
-				div.row
-					div.col.m2
-						| Busca por livros
-						ul
-							li Autor
-					div.col.m10
-						div.col.s3(v-repeat="item:items")
-							div.card.hoverable(style="background:url({{item.image}})")
-								span.item-title {{item.name}}
+  nav.top-nav
+    div.container
+      div.nav-wrapper
+        a.page-title Welcome to Vue.js
+  
+  div
+    div#beerApp
 
-	script(type="text/javascript", src="/vendor/jquery/dist/jquery.min.js")
-	script(type="text/javascript", src="/vendor/Materialize/dist/js/materialize.min.js")
-	script(type="text/javascript", src="/vendor/vue/dist/vue.min.js")
-	script(type="text/javascript", src="/vendor/vue-resource/dist/vue-resource.min.js")
-	script(type="text/javascript", src="/javascripts/app.js")
+      div.container
+        div.row
+          div.col.m2
+            | Busca por livros
+            ul
+              li Autor
+          div.col.m10
+            div.col.s3(v-repeat="item:items")
+              div.card.hoverable
+                div.item-image(style="background:url({{item.image}})")
+                div.item-title {{item.name}}
+
+  script(type="text/javascript", src="/vendor/jquery/dist/jquery.min.js")
+  script(type="text/javascript", src="/vendor/Materialize/dist/js/materialize.min.js")
+  script(type="text/javascript", src="/vendor/vue/dist/vue.min.js")
+  script(type="text/javascript", src="/vendor/vue-resource/dist/vue-resource.min.js")
+  script(type="text/javascript", src="/javascripts/app.js")

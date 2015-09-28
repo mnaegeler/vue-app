@@ -16,17 +16,17 @@ app.get('/api/books', function(req, res) {
 		{
 			name: '1984'
 			, author: 'George Orwell'
-			, image: 'http://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdjwMg6r7ALIj_WjMUJQcbhmMVjNbl9oS-4QPlLTWak0a7HPiSGwF'
+			, image: '/images/1984.jpg'
 		}
 		, {
 			name: 'Pulp'
 			, author: 'Charles Bukowski'
-			, image: 'http://s28.postimg.org/wqsdt4ij1/images.jpg'
+			, image: '/images/pulp.gif'
 		}	
 		, {
 			name: 'Golem e o gênio - uma fábula eterna'
 			, author: 'Helene Wecker'
-			, image: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcST1ROOXGT341SEzl_xGdj7B0ueUdRIPRbwfB9jGb1la5_NesLi'
+			, image: '/images/golem-e-o-genio.png'
 		}
 	];
 
