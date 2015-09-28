@@ -1,12 +1,19 @@
-# Vue.js App
-A simple SPA to learn Vue.js features.
+# Vue.js App - Library
+A simple application to view book details.
 
-## Build
-Clone the repository and use a server of your preference (no back-end, yet).
+## Build and run
+Clone the repository and follow these steps:
 
-Install NPM packages: 
-    
-    npm install
+0. Install NPM packages:
+
+		npm install
+
+0. Install Bower packages:
+
+		bower install
+
+0. Run it:
+
+		nodemon
 
 And see the magic happening!
-
