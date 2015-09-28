@@ -3,23 +3,46 @@ block body
   nav.top-nav
     div.container
       div.nav-wrapper
-        a.page-title Welcome to Vue.js
+        a.page-title Welcome to Vue.js - Marcelo's library
   
   div
-    div#beerApp
+    div#booksApp
 
-      div.container
+      div.container.content
+        //
+          div.card
+            div(style="padding:10px")
+              h5 Debugger
+              pre {{$data | json}}
+
+        nav.search-bar
+          div.nav-wrapper
+            form
+              div.input-field
+                input#search(type="search", required, placeholder="Search...", v-model="filterTerm", autofocus)
+                label(for="search")
+                  i.material-icons search
+                i.material-icons(v-on="click:filterTerm = ''") close
         div.row
-          div.col.m2
-            | Busca por livros
-            ul
-              li Autor
-          div.col.m10
-            div.col.s3(v-repeat="item:items")
-              div.card.hoverable
-                div.item-image(style="background:url({{item.image}})")
-                div.item-title {{item.name}}
+          div.col.s2(v-repeat="item:items | filterBy filterTerm")
+            div.card.hoverable
+              a.waves-effect.waves-light.item-block(href="javascript:void(0);", v-on="click:doShowItem", rel="{{item.id}}")
+                span.item-image
+                  img.img-reponsive(v-attr="src: item.image")
+                span.item-title {{item.name}} - {{item.author}}
 
+      div#modal1.modal
+        div.modal-content
+          div.row
+            div.col.s4
+              img.img-reponsive(v-attr="src:showItem.image")
+            div.col.s8
+              h4 {{showItem.name}}
+              p.author {{showItem.author}}
+              p {{showItem.description}}
+        div.modal-footer.center-align
+          a.modal-action.modal-close.btn.waves-effect.waves-light(href="javascript:void(0);") Okay
+       
   script(type="text/javascript", src="/vendor/jquery/dist/jquery.min.js")
   script(type="text/javascript", src="/vendor/Materialize/dist/js/materialize.min.js")
   script(type="text/javascript", src="/vendor/vue/dist/vue.min.js")

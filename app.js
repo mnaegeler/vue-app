@@ -17,16 +17,25 @@ app.get('/api/books', function(req, res) {
 			name: '1984'
 			, author: 'George Orwell'
 			, image: '/images/1984.jpg'
+      , id: 1
 		}
 		, {
 			name: 'Pulp'
 			, author: 'Charles Bukowski'
 			, image: '/images/pulp.gif'
+      , id: 2
 		}	
+    , {
+      name: 'Cartas na rua'
+			, author: 'Charles Bukowski'
+      , image: '/images/cartas-na-rua.jpg'
+      , id: 3
+    }
 		, {
-			name: 'Golem e o gênio - uma fábula eterna'
+			name: 'Golem e o gênio'
 			, author: 'Helene Wecker'
 			, image: '/images/golem-e-o-genio.png'
+      , id: 4
 		}
 	];
 

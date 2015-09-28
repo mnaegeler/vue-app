@@ -1,3 +1,11 @@
+.content {
+  padding-top: 30px;
+  max-width: 952px;
+}
+.search-bar {
+  margin-bottom: 25px;
+}
+
 .top-nav {
   height: 100%;
 }
@@ -9,14 +17,31 @@
   line-height: 122px;
   font-size: 48px;
 }
-.item .title {
-  display: none;
-}
-.item:hover .title {
+
+.img-reponsive {
   display: block;
+  width: 100%;
 }
 
+.item-block {
+  display: block;
+}
+.item-title {
+  display: block;
+  padding: 5px;
+  height: 54px;
+}
 .item-image {
-  height: 150px;
-  background-size: cover;
+  display: block;
+  position: relative;
+  height: 205px;
+  overflow: hidden;
+}
+
+
+/*
+ * Modal
+ */
+.modal .author {
+  color: #666;
 }
