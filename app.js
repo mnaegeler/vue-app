@@ -37,11 +37,27 @@ app.get('/api/books', function(req, res) {
 			, image: '/images/golem-e-o-genio.png'
       , id: 4
 		}
+		, {
+			name: 'Tequila vermelha'
+			, author: 'Rick Riordan'
+			, image: '/images/tequila-vermelha.jpg'
+      , id: 5
+		}
+		, {
+			name: 'As aventuras de Sherlock Holmes'
+			, author: 'Sir Arthur Conan Doyle'
+			, image: '/images/as-aventuras-de-sherlock-holmes.jpg'
+      , id: 6
+		}
+		, {
+			name: 'O símbolo perdido'
+			, author: 'Dan Brown'
+			, image: '/images/o-simbolo-perdido.jpg'
+      , id: 7
+		}
 	];
 
 	res.send(books);
 });
 
-app.listen(3000, function() {
-  console.log('Magic happens on :3000');
-});
+app.listen(3001);
