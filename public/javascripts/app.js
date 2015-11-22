@@ -12,10 +12,11 @@
       var url = '/api/books';
       var self = this;
 
-      $( '.loading' ).addClass( 'hidden' );
-      $( app ).removeClass( 'hidden' );
-
       this.$http.get(url, function(res) {
+        
+        $( '.loading' ).addClass( 'hidden' );
+        $( app ).removeClass( 'hidden' );
+
         self.$set('items', res);
       });
     }
