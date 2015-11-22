@@ -1,3 +1,8 @@
+#booksApp {
+  opacity: 1;
+  transition: opacity .2s linear;
+}
+
 .content {
   padding-top: 30px;
   max-width: 952px;
@@ -44,4 +49,28 @@
  */
 .modal .author {
   color: #666;
+}
+
+
+/*
+ * Loading
+ */
+.relative {
+  position: relative;
+}
+
+.loading {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+  font-size: 24px;
+  color: #666;
+  opacity: 1;
+  transition: opacity 0.2s linear;
+}
+
+.hidden {
+  opacity: 0;
 }

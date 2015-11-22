@@ -1,4 +1,6 @@
 (function() {
+  var app = document.getElementById( 'booksApp' );
+
   new Vue({
     el: '#booksApp'
     , data: {
@@ -9,6 +11,10 @@
     , ready: function() {
       var url = '/api/books';
       var self = this;
+
+      $( '.loading' ).addClass( 'hidden' );
+      $( app ).removeClass( 'hidden' );
+
       this.$http.get(url, function(res) {
         self.$set('items', res);
       });
@@ -26,4 +32,5 @@
       }
     }
   });
+
 })();

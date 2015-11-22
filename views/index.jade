@@ -3,10 +3,13 @@ block body
   nav.top-nav
     div.container
       div.nav-wrapper
-        a.page-title Welcome to Vue.js - Marcelo's library
+        p(style="margin: 0")
+          a.page-title Biblioteca - Vue.js framework
+        a.github-button(href="https://github.com/marcelonaegeler/vue-app", data-style="mega", data-count-href="/marcelonaegeler/vue-app/stargazers", data-count-api="/repos/marcelonaegeler/vue-app#stargazers_count", data-count-aria-label="# stargazers on GitHub", aria-label="Star marcelonaegeler/vue-app on GitHub") Star
   
-  div
-    div#booksApp
+  div.relative
+    div.loading Carregando...
+    div#booksApp.hidden
 
       div.container.content
         //
@@ -19,7 +22,7 @@ block body
           div.nav-wrapper
             form
               div.input-field
-                input#search(type="search", required, placeholder="Search...", v-model="filterTerm", autofocus)
+                input#search(type="search", required, placeholder="Procurar...", v-model="filterTerm", autofocus)
                 label(for="search")
                   i.material-icons search
                 i.material-icons(v-on="click:filterTerm = ''") close
@@ -41,10 +44,11 @@ block body
               p.author {{showItem.author}}
               p {{showItem.description}}
         div.modal-footer.center-align
-          a.modal-action.modal-close.btn.waves-effect.waves-light(href="javascript:void(0);") Okay
+          a.modal-action.modal-close.btn.waves-effect.waves-light(href="javascript:void(0);") Fechar
        
   script(type="text/javascript", src="/vendor/jquery/dist/jquery.min.js")
   script(type="text/javascript", src="/vendor/Materialize/dist/js/materialize.min.js")
   script(type="text/javascript", src="/vendor/vue/dist/vue.min.js")
   script(type="text/javascript", src="/vendor/vue-resource/dist/vue-resource.min.js")
   script(type="text/javascript", src="/javascripts/app.js")
+  script#github-bjs(type="text/javascript", src="https://buttons.github.io/buttons.js", async, defer)
